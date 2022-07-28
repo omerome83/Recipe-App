@@ -1,0 +1,19 @@
+{
+  "name": "Corn Souffle",
+  "image": "images/corn-souffle.jpg",
+  "ingredients": [
+    "2 cans of cream corn",
+    "2 cans of whole corn",
+    "2 tablespoons of milk",
+    "3 eggs",
+    "3 tablespoons of corn starch",
+    "1 teaspoon of salt",
+    "1/3 cup of sugar",
+    "2 tablespoons of butter"
+  ],
+  "directions": [
+    "Mix everything in a bowl",
+    "Coat baking pan with butter to keep from sticking",
+    "Bake at 350F covered for 1 hour and remove cover until middle is cooked."
+  ]
+}
