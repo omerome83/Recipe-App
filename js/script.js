@@ -27,7 +27,6 @@ const recipeJSON = (file) => {
   const response = fetch(file)
     .then((response) => response.json())
     .then((recipe) => {
-      console.log(recipe.image);
       formatRecipe(recipe);
     });
   // const recipe = await response.text();

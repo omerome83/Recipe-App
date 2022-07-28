@@ -153,6 +153,7 @@ label {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-areas:
+    "recipe-selection"
     "recipe-title"
     "image"
     "ingredients"
@@ -162,7 +163,14 @@ label {
   padding: 1em;
   margin: 1em;
   border-radius: 0.25em;
-  max-width: 800px;
+  max-width: 40em;
+}
+
+.recipe-card__selection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+  grid-area: recipe-selection;
 }
 
 .recipe-card__recipe-title {
@@ -190,6 +198,7 @@ label {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
+      "recipe-selection   recipe-selection"
       "recipe-title       recipe-title"
       "image              ingredients"
       "directions         directions";
