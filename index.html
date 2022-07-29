@@ -11,12 +11,8 @@
 
 <body>
     <main>
-        <!-- <h3 class="application-name">Recipe App</h3> -->
-
-
         <section class="recipe-card">
-
-            <section class="recipe-card__selection ">
+            <div class="recipe-card__selection ">
                 <label for="recipe">Select a recipe: </label>
                 <select name="recipe">
                     <option value="">--Make a selection--</option>
@@ -24,25 +20,23 @@
                     <option class="recipe-name" value="peach-dumplings">Peach Dumplings</option>
                     <option class="recipe-name" value="honey-bun-cake">Honey Bun Cake</option>
                 </select>
-            </section>
-
-
+            </div>
             <h1 class="recipe-card__recipe-title"></h1>
-            <img id="recipe-card__image" src="#" alt="">
-            <div class="recipe-card__ingredients">
+            <img id="recipe-image" src="#" alt="">
+            <div class="recipe-card__ingredients"></div>
+            <div class="recipe-card__directions"></div>
 
+            <div class="recipe-card__social-media">
+                <h3>Follow Me</h3>
+                <ul>
+                    <li><a href="https://github.com/omerome83"><img src="./images/github.png" alt="My Github" /></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/romelwilliams/"><img src="./images/linkedin.png"
+                                alt="My LinkedIn" /></a></li>
+                    <li><a href="https://twitter.com/omerome"><img src="./images/twitter.png" alt="My Twitter" /></a>
+                    </li>
+                </ul>
             </div>
-            <div class="recipe-card__directions">
-
-            </div>
-
-            <ul class="recipe-card__social-media">
-                <li><a href="https://github.com/omerome83"><img src="./images/github.png" alt="My Github" /></a></li>
-                <li><a href="https://www.linkedin.com/in/romelwilliams/"><img src="./images/linkedin.png"
-                            alt="My LinkedIn" /></a></li>
-                <li><a href="https://twitter.com/omerome"><img src="./images/twitter.png" alt="My Twitter" /></a></li>
-            </ul>
-
         </section>
     </main>
     <footer>

@@ -1,5 +1,6 @@
+const selection = document.querySelector(".recipe-card__selection");
 const title = document.querySelector(".recipe-card__recipe-title");
-const image = document.getElementById("recipe-card__image");
+const image = document.getElementById("recipe-image");
 const ingredients = document.querySelector(".recipe-card__ingredients");
 const directions = document.querySelector(".recipe-card__directions");
 
@@ -11,7 +12,7 @@ const recipeFiles = [
 
 let recipeName = "";
 
-function loadRecipe() {
+function loadRandomRecipe() {
   // Selects a random .json file from the array
   return recipeFiles[Math.floor(Math.random() * recipeFiles.length)];
 }
@@ -56,6 +57,29 @@ function formatRecipe(recipe) {
   directions.innerHTML = `${directionsHeading} ${directionsBody}`;
 }
 
+selection.addEventListener("change", (event) => {
+  let recipe = "";
+
+  switch (event.target.value) {
+    case "corn-souffle":
+      recipe = "data/corn-souffle.json";
+      break;
+    case "peach-dumplings":
+      recipe = "data/peach-dumplings.json";
+      break;
+    case "honey-bun-cake":
+      recipe = "data/honey-bun-cake.json";
+      break;
+    case "kfc-original-secret-chicken":
+      recipe = "data/kfc-original-secret-chicken.json";
+      break;
+    default:
+      recipe = "";
+  }
+
+  recipeJSON(recipe);
+});
+
 // async function populateRecipe(file) {
 //   const response = await fetch(file);
 //   const recipe = await response.text();
@@ -63,5 +87,5 @@ function formatRecipe(recipe) {
 //   return recipe;
 // }
 
-recipeName = loadRecipe();
+recipeName = loadRandomRecipe();
 recipeJSON(recipeName);

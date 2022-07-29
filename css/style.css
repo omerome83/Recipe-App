@@ -93,6 +93,7 @@ select {
   --font-size-800: 2rem;
   --font-size-700: 1.75rem;
   --font-size-600: 1.5rem;
+  --font-size-500: 1.25rem;
   --font-size-normal: 1rem;
   --font-size-300: 0.875rem;
 
@@ -124,13 +125,13 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-size-normal);
+  font-size: var(--font-size-500);
   color: var(--color-neutral-light-orange);
 }
 
 h3 {
-  font-size: var(--font-size-normal);
-  color: var(--color-neutral-dark-gray);
+  font-size: var(--font-size-300);
+  color: var(--color-neutral-light-orange);
 }
 
 ul {
@@ -172,6 +173,7 @@ label {
     "directions"
     "social-media";
   align-items: center;
+  justify-content: center;
   background-color: var(--color-neutral-light-gray);
   padding: 1em;
   margin: 1em;
@@ -199,7 +201,7 @@ label {
 }
 
 .recipe-card__ingredients {
-  padding: 1em;
+  padding: 2em;
   grid-area: ingredients;
 }
 
@@ -209,19 +211,22 @@ label {
 }
 
 .recipe-card__social-media {
-  padding: 1em;
   grid-area: social-media;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+}
+
+.recipe-card__social-media ul {
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-content: center;
+  gap: 3em;
 }
 
 .recipe-card__social-media li {
   display: inline-block;
-  margin-right: 2em;
+}
+
+.recipe-card__social-media h3 {
+  text-align: center;
 }
 
 .recipe-card__social-media img:hover {
