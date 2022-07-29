@@ -244,3 +244,26 @@ label {
     align-items: center;
   }
 }
+
+/* Media query for printing */
+
+@media print {
+  .recipe-card__selection {
+    display: none;
+  }
+
+  .recipe-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "recipe-selection   recipe-selection"
+      "recipe-title       recipe-title"
+      "image              ingredients"
+      "directions         directions";
+    align-items: center;
+  }
+
+  .recipe-card__social-media {
+    display: none;
+  }
+}
