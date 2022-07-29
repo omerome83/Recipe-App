@@ -256,7 +256,6 @@ label {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-      "recipe-selection   recipe-selection"
       "recipe-title       recipe-title"
       "image              ingredients"
       "directions         directions";
