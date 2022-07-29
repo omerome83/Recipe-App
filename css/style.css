@@ -139,7 +139,7 @@ ul {
 
 li {
   color: var(--color-neutral-dark-gray);
-  font-size: 0.9rem;
+  font-size: var(--font-size-300);
 }
 
 select {
@@ -244,6 +244,7 @@ label {
       "directions         directions"
       "social-media       social-media";
     align-items: center;
+    border: 2px solid var(--color-neutral-dark-blue);
   }
 }
 
