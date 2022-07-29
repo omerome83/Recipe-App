@@ -1,6 +1,6 @@
 {
   "name": "Corn Souffle",
-  "image": "images/corn-souffle.jpg",
+  "image": "../images/corn-souffle.jpg",
   "ingredients": [
     "2 cans of cream corn",
     "2 cans of whole corn",
