@@ -3,34 +3,33 @@ const image = document.getElementById("recipe-card__image");
 const ingredients = document.querySelector(".recipe-card__ingredients");
 const directions = document.querySelector(".recipe-card__directions");
 
+const recipeFiles = [
+  "data/corn-souffle.json",
+  "data/peach-dumplings.json",
+  "data/honey-bun-cake.json",
+];
+
 let recipeName = "";
 
 function loadRecipe() {
-  const recipeFiles = [
-    "data/corn-souffle.json",
-    "data/peach-dumplings.json",
-    "data/honey-bun-cake.json",
-  ];
-
   // Selects a random .json file from the array
   return recipeFiles[Math.floor(Math.random() * recipeFiles.length)];
 }
 
-// const recipeJSON = async (file) => {
-//   const response = await fetch(file);
-//   const recipe = await response.text();
-//   console.log(recipe);
-//   //   return recipe;
-// };
-
-const recipeJSON = (file) => {
-  const response = fetch(file)
-    .then((response) => response.json())
-    .then((recipe) => {
-      formatRecipe(recipe);
-    });
-  // const recipe = await response.text();
+const recipeJSON = async (file) => {
+  // Loads the file
+  const response = await fetch(file);
+  const recipe = await response.json();
+  formatRecipe(recipe);
 };
+
+// const recipeJSON = (file) => {
+//   const response = fetch(file)
+//     .then((response) => response.json())
+//     .then((recipe) => {
+//       formatRecipe(recipe);
+//     });
+// };
 
 function formatRecipe(recipe) {
   let ingredientsBody = "<ul>";
