@@ -1,6 +1,6 @@
 {
   "name": "Peach Dumplings",
-  "image": "../images/peach-dumplings.jpg",
+  "image": "./images/peach-dumplings.jpg",
   "ingredients": [
     "2 whole large peaches",
     "2 8 oz cans crescent rolls",

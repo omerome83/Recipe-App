@@ -1,6 +1,6 @@
 {
   "name": "Honey Bun Cake",
-  "image": "../images/honey-bun-cake.jpg",
+  "image": "./images/honey-bun-cake.jpg",
   "ingredients": [
     "1 yellow cake mix",
     "1 cup brown sugar",

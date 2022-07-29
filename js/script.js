@@ -5,9 +5,9 @@ const ingredients = document.querySelector(".recipe-card__ingredients");
 const directions = document.querySelector(".recipe-card__directions");
 
 const recipeFiles = [
-  "../data/corn-souffle.json",
-  "../data/peach-dumplings.json",
-  "../data/honey-bun-cake.json",
+  "./data/corn-souffle.json",
+  "./data/peach-dumplings.json",
+  "./data/honey-bun-cake.json",
 ];
 
 let recipeName = "";
