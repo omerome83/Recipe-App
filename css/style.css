@@ -181,6 +181,7 @@ label {
 .recipe-card__selection {
   display: flex;
   justify-content: center;
+  padding: 1em;
   grid-area: recipe-selection;
 }
 
