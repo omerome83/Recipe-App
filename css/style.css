@@ -95,7 +95,7 @@ select {
   --font-size-600: 1.5rem;
   --font-size-500: 1.25rem;
   --font-size-normal: 1rem;
-  --font-size-300: 0.875rem;
+  --font-size-300: 0.75rem;
 
   /* Font Weights */
   --font-weight-900: 900;
@@ -176,6 +176,7 @@ label {
   margin: 1em;
   border-radius: 0.5em;
   max-width: 35em;
+  font-size: var(--font-size-300);
 }
 
 .recipe-card__selection {
