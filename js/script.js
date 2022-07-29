@@ -18,19 +18,12 @@ function loadRandomRecipe() {
 }
 
 const recipeJSON = async (file) => {
-  // Loads the file
+  // Fetches the .json file
   const response = await fetch(file);
   const recipe = await response.json();
+
   formatRecipe(recipe);
 };
-
-// const recipeJSON = (file) => {
-//   const response = fetch(file)
-//     .then((response) => response.json())
-//     .then((recipe) => {
-//       formatRecipe(recipe);
-//     });
-// };
 
 function formatRecipe(recipe) {
   let ingredientsBody = "<ul>";
@@ -60,18 +53,16 @@ function formatRecipe(recipe) {
 selection.addEventListener("change", (event) => {
   let recipe = "";
 
+  // Selects the proper recipe file that matches the criteria from the recipeFiles array
   switch (event.target.value) {
     case "corn-souffle":
-      recipe = "data/corn-souffle.json";
+      recipe = recipeFiles[0];
       break;
     case "peach-dumplings":
-      recipe = "data/peach-dumplings.json";
+      recipe = recipeFiles[1];
       break;
     case "honey-bun-cake":
-      recipe = "data/honey-bun-cake.json";
-      break;
-    case "kfc-original-secret-chicken":
-      recipe = "data/kfc-original-secret-chicken.json";
+      recipe = recipeFiles[2];
       break;
     default:
       recipe = "";
@@ -79,13 +70,6 @@ selection.addEventListener("change", (event) => {
 
   recipeJSON(recipe);
 });
-
-// async function populateRecipe(file) {
-//   const response = await fetch(file);
-//   const recipe = await response.text();
-//   console.log(recipe);
-//   return recipe;
-// }
 
 recipeName = loadRandomRecipe();
 recipeJSON(recipeName);
